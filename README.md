@@ -199,6 +199,6 @@ If you like this project:
 <div align="center">
 
 ## 💙 Seatify — Making Rental Management Smart & Simple
-<div><a href="mdrakibulhasan.page.gd">About me</a></div>
+<div><a href="https://mdrakibulhasan.page.gd">About me</a></div>
 
 </div>
