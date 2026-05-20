@@ -5,6 +5,7 @@
 <img src="https://img.shields.io/badge/Platform-Android-green?style=for-the-badge" />
 <img src="https://img.shields.io/badge/Language-Kotlin-orange?style=for-the-badge" />
 <img src="https://img.shields.io/badge/Database-Firebase-yellow?style=for-the-badge" />
+<img src="https://img.shields.io/badge/Database-Supabase-yellow?style=for-the-badge" />
 <img src="https://img.shields.io/badge/Status-Active-blue?style=for-the-badge" />
 <img src="https://img.shields.io/badge/UI-Modern-red?style=for-the-badge" />
 
