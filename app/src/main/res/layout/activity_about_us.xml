@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar_about"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:navigationIcon="@drawable/ic_search"
+        app:title="About Us"
+        app:titleTextColor="@color/text_dark" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="32dp">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_splash_logo"
+            app:tint="@color/primary_start" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Seatify v1.0.0"
+            android:textColor="@color/text_dark"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
+            android:text="Seatify is a smart hostel and mess seat availability management platform designed to help students and professionals find safe and affordable accommodations in Bangladesh."
+            android:textColor="@color/text_gray"
+            android:textSize="14sp"
+            android:lineSpacingExtra="4dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="\u00a9 2026 Seatify Inc."
+            android:textColor="@color/text_gray"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+</LinearLayout>

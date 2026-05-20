@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:contentScrim="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:toolbarId="@+id/toolbar">
+
+            <!-- Placeholder for multiple images/carousel -->
+            <ImageView
+                android:id="@+id/iv_property_detail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/bg_gradient"
+                app:layout_collapseMode="parallax" />
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/tv_detail_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Property Name"
+                android:textColor="@color/text_dark"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_detail_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:drawableStart="@drawable/ic_search"
+                android:drawablePadding="8dp"
+                android:text="Village, Town"
+                android:textColor="@color/text_gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_detail_price"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="৳ 4,500/month"
+                    android:textColor="@color/primary_start"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_detail_seats"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_social_button"
+                    android:paddingHorizontal="12dp"
+                    android:paddingVertical="6dp"
+                    android:text="3 Seats Available"
+                    android:textColor="@color/text_dark"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginVertical="16dp"
+                android:background="@color/input_stroke" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Description"
+                android:textColor="@color/text_dark"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_detail_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="This is a detailed description of the property. It has great facilities and is close to the city center."
+                android:textColor="@color/text_gray"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Owner Contact"
+                android:textColor="@color/text_dark"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_detail_contact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:drawableStart="@drawable/ic_person"
+                android:drawablePadding="12dp"
+                android:text="+880 1XXX XXXXXX"
+                android:textColor="@color/primary_start"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:clickable="true"
+                android:focusable="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Full Address"
+                android:textColor="@color/text_dark"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_detail_full_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Village Name, Road No, Building Details"
+                android:textColor="@color/text_gray"
+                android:textSize="16sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_book_now"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/bg_gradient"
+                android:text="Book This Seat"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_delete_property_detail"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="32dp"
+                android:background="@drawable/bg_social_button"
+                android:text="Delete My Listing"
+                android:textAllCaps="false"
+                android:textColor="#FF5252"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="24dp">
+
+        <TextView
+            android:id="@+id/tv_add_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add New Seat / Mess"
+            android:textColor="@color/text_dark"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Property Name -->
+        <EditText
+            android:id="@+id/et_add_name"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/bg_edit_text"
+            android:hint="Hostel / Mess Name"
+            android:paddingHorizontal="16dp"
+            app:layout_constraintTop_toBottomOf="@id/tv_add_title" />
+
+        <!-- Property Type & Room Type -->
+        <LinearLayout
+            android:id="@+id/layout_types"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/et_add_name">
+
+            <Spinner
+                android:id="@+id/spinner_type"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="4dp"
+                android:background="@drawable/bg_edit_text"
+                android:entries="@array/property_types"
+                android:paddingHorizontal="12dp" />
+
+            <Spinner
+                android:id="@+id/spinner_room_type"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight="1"
+                android:layout_marginStart="4dp"
+                android:background="@drawable/bg_edit_text"
+                android:entries="@array/room_types"
+                android:paddingHorizontal="12dp" />
+        </LinearLayout>
+
+        <!-- Address -->
+        <EditText
+            android:id="@+id/et_add_address"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_edit_text"
+            android:hint="Full Address"
+            android:paddingHorizontal="16dp"
+            app:layout_constraintTop_toBottomOf="@id/layout_types" />
+
+        <!-- Location (Village/Town) -->
+        <EditText
+            android:id="@+id/et_add_location"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_edit_text"
+            android:hint="Village / Town Name"
+            android:paddingHorizontal="16dp"
+            app:layout_constraintTop_toBottomOf="@id/et_add_address" />
+
+        <!-- Price and Seats -->
+        <LinearLayout
+            android:id="@+id/layout_price_seats"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/et_add_location">
+
+            <EditText
+                android:id="@+id/et_add_price"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_edit_text"
+                android:hint="Price (Monthly)"
+                android:inputType="number"
+                android:paddingHorizontal="16dp" />
+
+            <EditText
+                android:id="@+id/et_add_seats"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_edit_text"
+                android:hint="Total Seats"
+                android:inputType="number"
+                android:paddingHorizontal="16dp" />
+        </LinearLayout>
+
+        <!-- Contact Number -->
+        <EditText
+            android:id="@+id/et_add_contact"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_edit_text"
+            android:hint="Owner Contact Number"
+            android:inputType="phone"
+            android:paddingHorizontal="16dp"
+            app:layout_constraintTop_toBottomOf="@id/layout_price_seats" />
+
+        <!-- Description -->
+        <EditText
+            android:id="@+id/et_add_description"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_edit_text"
+            android:gravity="top"
+            android:hint="Description..."
+            android:padding="16dp"
+            app:layout_constraintTop_toBottomOf="@id/et_add_contact" />
+
+        <!-- Image Upload Section -->
+        <TextView
+            android:id="@+id/tv_image_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Upload Pictures (1 - 5)"
+            android:textColor="@color/text_dark"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_add_description" />
+
+        <LinearLayout
+            android:id="@+id/layout_images"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/tv_image_label">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_pick_images"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/bg_social_button"
+                android:text="+ Add" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_selected_images"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginStart="12dp" />
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progress_bar_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/btn_submit_property"
+            app:layout_constraintEnd_toEndOf="@id/btn_submit_property"
+            app:layout_constraintStart_toStartOf="@id/btn_submit_property"
+            app:layout_constraintTop_toTopOf="@id/btn_submit_property" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_submit_property"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="32dp"
+            android:background="@drawable/bg_gradient"
+            android:text="Post Seat Availability"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layout_images" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

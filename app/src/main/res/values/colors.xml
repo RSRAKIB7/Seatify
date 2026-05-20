@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Design Colors -->
+    <color name="background">#FFFFFFFF</color>
+    <color name="primary_start">#2563EB</color>
+    <color name="primary_end">#9333EA</color>
+    <color name="text_dark">#1F2937</color>
+    <color name="text_gray">#6B7280</color>
+    <color name="blue_link">#2563EB</color>
+    <color name="input_stroke">#E5E7EB</color>
+    <color name="input_bg">#F9FAFB</color>
+    <color name="social_btn_bg">#FFFFFFFF</color>
+</resources>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background">#111827</color>
+    <color name="text_dark">#F9FAFB</color>
+    <color name="text_gray">#9CA3AF</color>
+    <color name="blue_link">#60A5FA</color>
+    <color name="input_stroke">#374151</color>
+    <color name="input_bg">#1F2937</color>
+    <color name="social_btn_bg">#1F2937</color>
+</resources>

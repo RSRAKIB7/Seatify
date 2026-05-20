@@ -1,0 +1,22 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <!-- Outer Roof -->
+    <path
+        android:fillColor="#000000"
+        android:pathData="M12,3L2,12h3v8h14v-8h3L12,3z M17,18H7v-7.2l5-4.5l5,4.5V18z"/>
+    <!-- Chair Seat -->
+    <path
+        android:fillColor="#000000"
+        android:pathData="M9,13h6v2h-6z"/>
+    <!-- Chair Back -->
+    <path
+        android:fillColor="#000000"
+        android:pathData="M10,11h4v2h-4z"/>
+    <!-- Chair Legs -->
+    <path
+        android:fillColor="#000000"
+        android:pathData="M9,15h1v2h-1z M14,15h1v2h-1z"/>
+</vector>

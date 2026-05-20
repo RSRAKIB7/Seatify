@@ -1,0 +1,26 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="300dp"
+    android:height="150dp"
+    android:viewportWidth="100"
+    android:viewportHeight="50">
+    <!-- Floor line -->
+    <path
+        android:strokeColor="#CCCCCC"
+        android:strokeWidth="0.5"
+        android:pathData="M0,45h100"/>
+    <!-- Door -->
+    <path
+        android:strokeColor="#CCCCCC"
+        android:strokeWidth="0.5"
+        android:pathData="M45,15h15v30h-15z"/>
+    <!-- Bed -->
+    <path
+        android:strokeColor="#CCCCCC"
+        android:strokeWidth="0.5"
+        android:pathData="M65,35h30v10h-30z M65,30v5 M95,30v5"/>
+    <!-- Table/Chairs simplified -->
+    <path
+        android:strokeColor="#CCCCCC"
+        android:strokeWidth="0.5"
+        android:pathData="M10,35h20v2h-20z M15,37v8 M25,37v8"/>
+</vector>

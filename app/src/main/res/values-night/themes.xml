@@ -1,0 +1,13 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Base.Theme.Seatify" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/primary_start</item>
+        <item name="android:windowBackground">@color/background</item>
+        <item name="android:statusBarColor">@color/background</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="checkboxStyle">@style/Widget.App.CheckBox</item>
+    </style>
+
+    <style name="Widget.App.CheckBox" parent="Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="buttonTint">@color/primary_start</item>
+    </style>
+</resources>

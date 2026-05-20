@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background"
+        app:elevation="0dp">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar_manage"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:title="Manage Bookings"
+            app:titleTextColor="@color/text_dark" />
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab_layout_bookings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabIndicatorColor="@color/primary_start"
+            app:tabSelectedTextColor="@color/primary_start"
+            app:tabTextColor="@color/text_gray">
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="My Bookings" />
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Who Booked My Property" />
+
+        </com.google.android.material.tabs.TabLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_manage_bookings"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="16dp"
+            android:clipToPadding="false" />
+
+        <ProgressBar
+            android:id="@+id/pb_manage_bookings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_empty_bookings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="No bookings found"
+            android:textColor="@color/text_gray"
+            android:visibility="gone" />
+    </FrameLayout>
+</LinearLayout>

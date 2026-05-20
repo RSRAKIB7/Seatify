@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background"
+        app:elevation="0dp">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:title="Seatify"
+            app:titleTextColor="@color/text_dark" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- Home View -->
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/home_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:id="@+id/tv_welcome_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/welcome_user"
+                    android:textColor="@color/text_dark"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/available_seats_near"
+                    android:textColor="@color/text_gray"
+                    android:textSize="16sp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_properties"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:nestedScrollingEnabled="false"
+                    tools:listitem="@layout/item_seat" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp" />
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <!-- Search View -->
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/search_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <EditText
+                android:id="@+id/et_search"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:autofillHints="postalAddress"
+                android:background="@drawable/bg_edit_text"
+                android:hint="@string/search_hint"
+                android:inputType="text"
+                android:paddingHorizontal="16dp"
+                android:drawableStart="@drawable/ic_search"
+                android:drawablePadding="12dp"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/recent_results"
+                android:textColor="@color/text_dark"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_search_results_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:nestedScrollingEnabled="false"
+                tools:listitem="@layout/item_seat" />
+
+            <View android:layout_width="match_parent" android:layout_height="100dp" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- My Listings View -->
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/listings_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="My Property Listings"
+                android:textColor="@color/text_dark"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_my_listings_tab"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:nestedScrollingEnabled="false"
+                tools:listitem="@layout/item_my_property" />
+
+            <View android:layout_width="match_parent" android:layout_height="120dp" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- Profile View -->
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/profile_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingVertical="32dp">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:cardCornerRadius="50dp"
+                    app:strokeWidth="0dp">
+
+                    <ImageView
+                        android:id="@+id/iv_profile_pic_main"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:contentDescription="@string/profile"
+                        android:padding="24dp"
+                        android:src="@drawable/ic_person"
+                        app:tint="@color/primary_start" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <TextView
+                    android:id="@+id/tv_profile_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/user_name"
+                    android:textColor="@color/text_dark"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_admin_panel_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/bg_social_button"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="16dp"
+                android:text="Admin Panel"
+                android:textColor="@color/primary_start"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <!-- 1. My Profile -->
+            <TextView
+                android:id="@+id/tv_my_profile_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_social_button"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="16dp"
+                android:text="My Profile"
+                android:textColor="@color/text_dark"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:drawableEnd="@drawable/ic_person"
+                android:drawablePadding="12dp" />
+
+            <!-- 2. My Booking Requests -->
+            <TextView
+                android:id="@+id/tv_my_bookings_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_social_button"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="16dp"
+                android:text="My Booking Requests"
+                android:textColor="@color/text_dark"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:drawableEnd="@drawable/ic_booking"
+                android:drawablePadding="12dp" />
+
+            <!-- 3. My Properties -->
+            <TextView
+                android:id="@+id/tv_my_listings_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_social_button"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="16dp"
+                android:text="My Properties"
+                android:textColor="@color/text_dark"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:drawableEnd="@drawable/ic_hostel"
+                android:drawablePadding="12dp" />
+
+            <!-- 4. Who Booked My Property -->
+            <TextView
+                android:id="@+id/tv_manage_bookings_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_social_button"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="16dp"
+                android:text="Who Booked My Property"
+                android:textColor="@color/text_dark"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:drawableEnd="@drawable/ic_manage"
+                android:drawablePadding="12dp" />
+
+            <!-- 5. About Us -->
+            <TextView
+                android:id="@+id/tv_about_us_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_social_button"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="16dp"
+                android:text="About Us"
+                android:textColor="@color/text_dark"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:drawableEnd="@drawable/ic_about"
+                android:drawablePadding="12dp" />
+
+            <!-- 6. Settings -->
+            <TextView
+                android:id="@+id/tv_settings_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_social_button"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="16dp"
+                android:text="Settings"
+                android:textColor="@color/text_dark"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:drawableEnd="@drawable/ic_settings"
+                android:drawablePadding="12dp" />
+
+            <!-- Hidden Dark Mode toggle for system logic -->
+            <LinearLayout
+                android:id="@+id/layout_dark_mode_hidden"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/switch_dark_mode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <!-- 7. Logout -->
+            <TextView
+                android:id="@+id/tv_logout_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_social_button"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="16dp"
+                android:text="Logout"
+                android:textColor="#FF5252"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:drawableEnd="@drawable/ic_logout"
+                android:drawablePadding="12dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="150dp" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottom_app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:backgroundTint="#1F2937"
+        app:fabAlignmentMode="center"
+        app:fabCradleMargin="10dp"
+        app:fabCradleRoundedCornerRadius="24dp"
+        app:fabCradleVerticalOffset="12dp">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            app:elevation="0dp"
+            app:itemIconSize="24dp"
+            app:itemIconTint="@color/white"
+            app:itemTextColor="@color/white"
+            app:labelVisibilityMode="unlabeled"
+            app:menu="@menu/bottom_nav_menu" />
+
+    </com.google.android.material.bottomappbar.BottomAppBar>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/add_seat"
+        android:src="@drawable/ic_add"
+        app:backgroundTint="@color/primary_start"
+        app:elevation="12dp"
+        app:layout_anchor="@+id/bottom_app_bar"
+        app:layout_anchorGravity="top|center"
+        app:tint="@color/white" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

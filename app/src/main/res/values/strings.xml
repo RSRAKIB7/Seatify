@@ -1,0 +1,83 @@
+<resources>
+    <string name="app_name">Seatify</string>
+    <string name="welcome_to_seatify">Welcome to Seatify</string>
+    <string name="subtitle_login">Smart Hostel &amp; Mess Seat Availability</string>
+    <string name="email_address">Email Address</string>
+    <string name="email_hint">you@example.com</string>
+    <string name="password">Password</string>
+    <string name="password_hint">Enter your password</string>
+    <string name="remember_me">Remember me</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="sign_in">Sign In</string>
+    <string name="or_continue_with">Or continue with</string>
+    <string name="dont_have_account">Don\'t have an account?</string>
+    <string name="sign_up">Sign up</string>
+    <string name="desc_home_icon">Home Icon</string>
+    <string name="desc_google_icon">Google Login</string>
+    <string name="desc_facebook_icon">Facebook Login</string>
+    <string name="create_account">Create Account</string>
+    <string name="full_name">Full Name</string>
+    <string name="full_name_hint">John Doe</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="phone_hint">+1 (555) 000-0000</string>
+    <string name="create_password_hint">Create a strong password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="re_enter_password_hint">Re-enter your password</string>
+    <string name="agree_to_terms">I agree to the </string>
+    <string name="terms_of_service">Terms of Service</string>
+    <string name="and"> and </string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="already_have_account">Already have an account?</string>
+    <string name="sign_in_link">Sign in</string>
+    <string name="agree_to_terms_full">I agree to the Terms of Service and Privacy Policy</string>
+    <string name="welcome_user">Hello, Guest!</string>
+    <string name="find_your_seat">Find your perfect seat today</string>
+    <string name="find_seat">Find Seat</string>
+    <string name="find_seat_desc">Search for available hostels &amp; messes</string>
+    <string name="my_bookings">My Bookings</string>
+    <string name="my_bookings_desc">View and manage your reservations</string>
+    <string name="profile">Profile</string>
+    <string name="profile_desc">Update your personal information</string>
+    <string name="quick_book">Quick Book</string>
+    <string name="home">Home</string>
+    <string name="search">Search</string>
+    <string name="notifications">Notifications</string>
+
+    <!-- New Strings -->
+    <string name="available_seats_near">Available Seats Near You</string>
+    <string name="search_hint">Search Village, Town, or Mess Name</string>
+    <string name="recent_results">Recent Results</string>
+    <string name="user_name">Rakibul Hasan</string>
+    <string name="your_bookings">Your Bookings</string>
+    <string name="add_seat">Add Seat</string>
+    <string name="add_new_seat">Add New Seat</string>
+    <string name="seat_name_label">Hostel/Mess Name</string>
+    <string name="seat_name_hint">Enter name</string>
+    <string name="location_label">Location (Village/Town)</string>
+    <string name="location_hint">Enter location</string>
+    <string name="price_label">Price per Month</string>
+    <string name="price_hint">৳ 0,000</string>
+    <string name="seats_available_label">Number of Seats Available</string>
+    <string name="seats_available_hint">e.g. 2</string>
+    <string name="save_details">Save Seat Details</string>
+    <string name="cozy_hostel">Cozy Green Hostel</string>
+    <string name="hostel_location">Green Road, Dhaka</string>
+    <string name="hostel_price">৳ 4,500/month</string>
+    <string name="seats_left_2">2 Seats Left</string>
+    <string name="default_web_client_id">649113801262-n1g3ahjn94pgpj3limmblkq65i5qfbai.apps.googleusercontent.com</string>
+    <string name="supabase_url">https://aorimbiuoacqmmclzflz.supabase.co</string>
+    <string name="supabase_key">sb_publishable_4mg4bjzMbZzfIgDbrI7ZxQ_2hrAzTy9</string>
+    <string name="supabase_bucket_name">image</string>
+    <string name="facebook_app_id" translatable="false">0</string>
+    <string name="fb_login_protocol_scheme" translatable="false">fb0</string>
+    <string name="facebook_client_token" translatable="false">0</string>
+    <string name="my_property_listings">My Property Listings</string>
+    <string name="label_main">MAIN</string>
+    <string name="title_reset_password">Reset Password</string>
+    <string name="subtitle_reset_password">Enter your new password below</string>
+    <string name="label_new_password">New Password</string>
+    <string name="hint_new_password">Create a new password</string>
+    <string name="label_confirm_password">Confirm New Password</string>
+    <string name="hint_confirm_password">Confirm your new password</string>
+    <string name="btn_update_password">Update Password</string>
+</resources>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="property_types">
+        <item>Hostel</item>
+        <item>Mess</item>
+        <item>House / Rent</item>
+    </string-array>
+
+    <string-array name="gender_options">
+        <item>Select Gender</item>
+        <item>Male</item>
+        <item>Female</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="room_types">
+        <item>Select Room Type</item>
+        <item>Single Room</item>
+        <item>Shared Room</item>
+        <item>Master Bed</item>
+        <item>Floor Bed</item>
+    </string-array>
+
+    <string-array name="smoking_options">
+        <item>Smoking Habit</item>
+        <item>Non-Smoker</item>
+        <item>Smoker</item>
+    </string-array>
+</resources>

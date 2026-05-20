@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_analytics"
+        android:icon="@drawable/ic_analytics"
+        android:title="Analytics" />
+    <item
+        android:id="@+id/nav_all_bookings"
+        android:icon="@drawable/ic_rent"
+        android:title="Bookings" />
+    <item
+        android:id="@+id/nav_manage_seats"
+        android:icon="@drawable/ic_hostel"
+        android:title="Seats" />
+    <item
+        android:id="@+id/nav_manage_mess"
+        android:icon="@drawable/ic_mess"
+        android:title="Mess" />
+</menu>

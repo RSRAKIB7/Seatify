@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="24dp">
+
+        <!-- Icon Container (Consistent with Login/Register) -->
+        <View
+            android:id="@+id/icon_bg"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/bg_gradient"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/icon_admin"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:contentDescription="@string/profile"
+            android:src="@drawable/ic_person"
+            app:layout_constraintBottom_toBottomOf="@id/icon_bg"
+            app:layout_constraintEnd_toEndOf="@id/icon_bg"
+            app:layout_constraintStart_toStartOf="@id/icon_bg"
+            app:layout_constraintTop_toTopOf="@id/icon_bg"
+            app:tint="@color/white" />
+
+        <TextView
+            android:id="@+id/tv_admin_panel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Admin Panel"
+            android:textColor="@color/text_dark"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/icon_bg" />
+
+        <TextView
+            android:id="@+id/tv_subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Manage your properties and services"
+            android:textColor="@color/text_gray"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_admin_panel" />
+
+        <!-- Management Grid -->
+        <GridLayout
+            android:id="@+id/grid_management"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:alignmentMode="alignMargins"
+            android:columnCount="2"
+            android:rowCount="2"
+            app:layout_constraintTop_toBottomOf="@id/tv_subtitle">
+
+            <!-- House Management -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/btn_manage_house"
+                android:layout_width="0dp"
+                android:layout_height="140dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="8dp"
+                android:background="@drawable/bg_social_button"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="16dp">
+
+                <ImageView
+                    android:id="@+id/iv_house"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_home_white"
+                    app:layout_constraintBottom_toTopOf="@id/tv_house"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="@color/primary_start" />
+
+                <TextView
+                    android:id="@+id/tv_house"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="House"
+                    android:textColor="@color/text_dark"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- Mess Management -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/btn_manage_mess"
+                android:layout_width="0dp"
+                android:layout_height="140dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="8dp"
+                android:background="@drawable/bg_social_button"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="16dp">
+
+                <ImageView
+                    android:id="@+id/iv_mess"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_mess"
+                    app:layout_constraintBottom_toTopOf="@id/tv_mess"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="@color/primary_start" />
+
+                <TextView
+                    android:id="@+id/tv_mess"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mess"
+                    android:textColor="@color/text_dark"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- Hostel Management -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/btn_manage_hostel"
+                android:layout_width="0dp"
+                android:layout_height="140dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="8dp"
+                android:background="@drawable/bg_social_button"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="16dp">
+
+                <ImageView
+                    android:id="@+id/iv_hostel"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_hostel"
+                    app:layout_constraintBottom_toTopOf="@id/tv_hostel"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="@color/primary_start" />
+
+                <TextView
+                    android:id="@+id/tv_hostel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hostel"
+                    android:textColor="@color/text_dark"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- Rent Management -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/btn_manage_rent"
+                android:layout_width="0dp"
+                android:layout_height="140dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="8dp"
+                android:background="@drawable/bg_social_button"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="16dp">
+
+                <ImageView
+                    android:id="@+id/iv_rent"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_rent"
+                    app:layout_constraintBottom_toTopOf="@id/tv_rent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="@color/primary_start" />
+
+                <TextView
+                    android:id="@+id/tv_rent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rent"
+                    android:textColor="@color/text_dark"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </GridLayout>
+
+        <!-- Analytics Button (Consistent with Main Sign In Style) -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_view_analytics"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/bg_gradient"
+            android:text="View Detailed Analytics"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/grid_management" />
+
+        <TextView
+            android:id="@+id/tv_logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="32dp"
+            android:text="Logout from Admin"
+            android:textColor="@color/blue_link"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_view_analytics" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

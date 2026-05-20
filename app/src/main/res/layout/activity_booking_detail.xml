@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Booking Details"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_dark"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Applicant Info -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="2dp"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Applicant Information"
+                    android:textStyle="bold"
+                    android:textColor="@color/primary_start"
+                    android:layout_marginBottom="8dp"/>
+
+                <TextView android:id="@+id/tv_detail_user_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Name: " android:textColor="@color/text_dark"/>
+                <TextView android:id="@+id/tv_detail_user_phone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Phone: " android:textColor="@color/text_dark" android:layout_marginTop="4dp"/>
+                <TextView android:id="@+id/tv_detail_user_nid" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="NID: " android:textColor="@color/text_dark" android:layout_marginTop="4dp"/>
+                <TextView android:id="@+id/tv_detail_user_address" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Address: " android:textColor="@color/text_dark" android:layout_marginTop="4dp"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Verification Photo -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Verification ID Photo"
+            android:textStyle="bold"
+            android:textColor="@color/text_dark"
+            android:layout_marginBottom="8dp"/>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            app:cardCornerRadius="12dp"
+            android:layout_marginBottom="16dp">
+            <ImageView
+                android:id="@+id/iv_detail_id_card"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:contentDescription="ID Card"
+                android:src="@drawable/bg_gradient"/>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Booking Details -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="2dp"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Stay Details"
+                    android:textStyle="bold"
+                    android:textColor="@color/primary_start"
+                    android:layout_marginBottom="8dp"/>
+
+                <TextView android:id="@+id/tv_detail_move_in" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Move-in: " android:textColor="@color/text_dark"/>
+                <TextView android:id="@+id/tv_detail_duration" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Duration: " android:textColor="@color/text_dark" android:layout_marginTop="4dp"/>
+                <TextView android:id="@+id/tv_detail_room_type" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Room: " android:textColor="@color/text_dark" android:layout_marginTop="4dp"/>
+                <TextView android:id="@+id/tv_detail_seats" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Seats requested: " android:textColor="@color/primary_start" android:textStyle="bold" android:layout_marginTop="4dp"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Preferences -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="2dp"
+            android:layout_marginBottom="24dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Harmony &amp; Preferences"
+                    android:textStyle="bold"
+                    android:textColor="@color/primary_start"
+                    android:layout_marginBottom="8dp"/>
+
+                <TextView android:id="@+id/tv_detail_gender" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Gender: " android:textColor="@color/text_dark"/>
+                <TextView android:id="@+id/tv_detail_smoking" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Smoking: " android:textColor="@color/text_dark" android:layout_marginTop="4dp"/>
+                <TextView android:id="@+id/tv_detail_dietary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Dietary: " android:textColor="@color/text_dark" android:layout_marginTop="4dp"/>
+                <TextView android:id="@+id/tv_detail_notes" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Notes: " android:textColor="@color/text_dark" android:layout_marginTop="8dp"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Status -->
+        <TextView
+            android:id="@+id/tv_detail_status_final"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Current Status: Pending"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_gray"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Actions -->
+        <LinearLayout
+            android:id="@+id/layout_detail_actions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_marginBottom="12dp">
+
+                <Button
+                    android:id="@+id/btn_reject_detail"
+                    android:layout_width="0dp"
+                    android:layout_height="56dp"
+                    android:layout_weight="1"
+                    android:text="Reject"
+                    android:backgroundTint="#FF5252"
+                    android:textColor="@color/white"
+                    android:layout_marginEnd="8dp"/>
+
+                <Button
+                    android:id="@+id/btn_accept_detail"
+                    android:layout_width="0dp"
+                    android:layout_height="56dp"
+                    android:layout_weight="1"
+                    android:text="Accept"
+                    android:backgroundTint="#4CAF50"
+                    android:textColor="@color/white"
+                    android:layout_marginStart="8dp"/>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_complete_detail"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="Complete Booking"
+                android:backgroundTint="@color/primary_start"
+                android:textColor="@color/white"
+                android:layout_marginBottom="32dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
